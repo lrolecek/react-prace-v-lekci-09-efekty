@@ -23,10 +23,11 @@ const People = () => {
 
 	return (
 		<div className="komponenta">
-			<h3>People</h3>
+			<h3>Starwars People</h3>
 			<ul>
 			{ people.map(person => <li key={person.name}>{person.name}</li> ) }
 			</ul>
+			<h3>Úůůůůůúúú, jupíí</h3>
 		</div>
 	)
 }
