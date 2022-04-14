@@ -1,1 +1,1 @@
-# react-prace-v-lekci-09-efekty
+# React - práce v lekci 9 - Efekty
