@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './style.css';
 
-const Komponenta = () => {
+const People = () => {
 
 	const [person, setPerson] = useState({});
 
@@ -19,12 +19,9 @@ const Komponenta = () => {
 
 	return (
 		<div className="komponenta">
-			<h3>Komponenta</h3>
-			<p>Jméno: {person.name}</p>
-			<p>Barva očí: {person.eye_color}</p>
-			<p>Barva vlasů: {person.hair_color}</p>
+			<h3>People</h3>
 		</div>
 	)
 }
 
-export default Komponenta;
+export default People;
