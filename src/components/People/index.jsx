@@ -3,16 +3,20 @@ import './style.css';
 
 const People = () => {
 
-	const [person, setPerson] = useState({});
+	const [people, setPeople] = useState([]);
+
+	const loadData = () => {
+		fetch('https://swapi.dev/api/people/')
+		.then(response => response.json())
+		.then(data => {
+			console.log(data);
+			setPeople(data.results);
+		})
+	}
 
 	useEffect(
 		() => {
-			fetch('https://swapi.dev/api/people/1/')
-			.then(response => response.json())
-			.then(data => {
-				console.log(data);
-				setPerson(data);
-			})
+			loadData();
 		},
 		[]
 	);
@@ -20,6 +24,9 @@ const People = () => {
 	return (
 		<div className="komponenta">
 			<h3>People</h3>
+			<ul>
+			{ people.map(person => <li key={person.name}>{person.name}</li> ) }
+			</ul>
 		</div>
 	)
 }
